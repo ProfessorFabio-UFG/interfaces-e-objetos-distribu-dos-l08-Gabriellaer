@@ -59,6 +59,8 @@ public class Client {
 
             int resp = stub.soma(100,1000);
             System.out.println("Response from soma: " + resp);
+            resp = stub.luckyNumber();
+            System.out.println("Your luck number is " + resp);
             
         } catch (Exception e) {
             System.err.println("Client exception: " + e.toString());
