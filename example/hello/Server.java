@@ -41,7 +41,7 @@ import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-
+import java.util.Random;
 public class Server implements Hello {
 
     public Server() {}
@@ -53,7 +53,11 @@ public class Server implements Hello {
     public int soma (int a, int b) {
         return a + b;
     }
-
+    public int luckyNumber(){
+        Random r = new Random();
+        int rand = r.nextInt(100);
+        return rand;
+    }
     public static void main(String args[]) {
 
         try {
